@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Elizabeth</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <!-- Corazón inicial -->
+        <div class="heart" onclick="revealMessage()"></div>
+
+        <!-- Mensaje oculto -->
+        <div id="message" class="hidden">
+            <p>¡Feliz San Valentín mi pollito de colores!</p>
+            <p>Eres la mujer con la que deseo pasar el resto de mi vida, hay tantas cosas que llego a sentir por ti que se me hace dificil el solo decirlas. Te amo ❤️</p>
+        </div>
+
+        <!-- Galería de fotos oculta -->
+        <div id="gallery" class="hidden">
+            <h2>Nuestros momentos UwU</h2>
+            <div class="carousel">
+                <button class="carousel-button prev" onclick="prevPhoto()">&#10094;</button>
+                <div class="carousel-images">
+                    <img src="img/foto1.jpg" alt="Nuestra foto 1" class="active">
+                    <img src="img/foto2.jpg" alt="Nuestra foto 2">
+                    <img src="img/foto3.jpg" alt="Nuestra foto 3">
+                    <img src="img/foto4.jpg" alt="Nuestra foto 4">
+                </div>
+                <button class="carousel-button next" onclick="nextPhoto()">&#10095;</button>
+            </div>
+        </div>
+
+        <!-- Contador de momentos especiales -->
+        <div id="counter" class="hidden">
+            <h2>Días desde que te conocí: </h2>
+            <p id="daysCount"></p>
+            <h2>Nuestro tiempo juntos:</h2>
+            <p id="timeTogether"></p>
+        </div>
+
+        <!-- Reproductor de video -->
+        <div id="video" class="hidden">
+            <h2>La canción que me hizo automáticamente pensar en ti despues de meses de conocerte:</h2>
+            <div class="video-container">
+                <video controls>
+                    <source src="multimedia/video1.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</body>
+</html>

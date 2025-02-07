@@ -1,0 +1,167 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f9e3e3;
+    font-family: 'Arial', sans-serif;
+}
+
+.card {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.heart {
+    width: 100px;
+    height: 100px;
+    background-color: #ff4d4d;
+    position: relative;
+    transform: rotate(45deg);
+    cursor: pointer;
+    animation: beat 1.5s infinite;
+}
+
+.heart::before,
+.heart::after {
+    content: '';
+    width: 100px;
+    height: 100px;
+    background-color: #ff4d4d;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart::before {
+    top: -50px;
+    left: 0;
+}
+
+.heart::after {
+    top: 0;
+    left: -50px;
+}
+
+@keyframes beat {
+    0%, 100% {
+        transform: rotate(45deg) scale(1);
+    }
+    50% {
+        transform: rotate(45deg) scale(1.1);
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+#message, #gallery, #counter, #video {
+    margin-top: 20px;
+}
+
+.carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px; /* Ajusta el tamaño máximo del carrusel */
+    margin: 0 auto;
+}
+
+.carousel-images {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.carousel-images img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+    display: none; /* Oculta todas las imágenes por defecto */
+}
+
+.carousel-images img.active {
+    display: block; /* Muestra solo la imagen activa */
+}
+
+.carousel-button {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+.carousel-button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.video-container {
+    width: 100%;
+    max-width: 500px; /* Ajusta el tamaño máximo del video */
+    margin: 0 auto;
+}
+
+video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 600px) {
+    .card {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .heart {
+        width: 80px;
+        height: 80px;
+    }
+
+    .heart::before,
+    .heart::after {
+        width: 80px;
+        height: 80px;
+    }
+
+    .heart::before {
+        top: -40px;
+    }
+
+    .heart::after {
+        left: -40px;
+    }
+
+    #message, #gallery, #counter, #video {
+        margin-top: 15px;
+    }
+}
