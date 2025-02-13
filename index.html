@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Elizabeth</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <!-- Corazón inicial -->
+        <div class="heart" onclick="revealMessage()"></div>
+
+        <!-- Mensaje oculto -->
+        <div id="message" class="hidden">
+            <p>¡Feliz San Valentín mi pollito de colores!</p>
+            <p>Eres la mujer que me hizo desarrollar este proyecto en HTML porque hay tantas cosas que llego a sentir por ti que se me hace dificil el solo decirlas, por eso diseñe esto. Te amo ❤️</p>
+            <img src="img/cat.gif" alt="Gif gato" class="gif">
+        </div>
+
+        <!-- Galería de fotos oculta -->
+        <div id="gallery" class="hidden">
+            <h2>Nuestros momentos UwU</h2>
+            <div class="carousel">
+                <button class="carousel-button prev" onclick="prevPhoto()">&#10094;</button>
+                <div class="carousel-images">
+                    <img src="img/foto1.jpg" alt="Nuestra foto 1" class="active">
+                    <img src="img/foto2.jpg" alt="Nuestra foto 2">
+                    <img src="img/foto3.jpg" alt="Nuestra foto 3">
+                    <img src="img/foto4.jpg" alt="Nuestra foto 4">
+                    <img src="img/foto5.jpg" alt="Nuestra foto 5">
+                    <img src="img/foto6.jpg" alt="Nuestra foto 6">
+                    <img src="img/foto7.jpg" alt="Nuestra foto 7">
+                    <img src="img/foto8.jpg" alt="Nuestra foto 8">
+                    <img src="img/foto9.jpg" alt="Nuestra foto 9">
+                    <img src="img/foto10.jpg" alt="Nuestra foto 10">
+                    <img src="img/foto11.jpg" alt="Nuestra foto 11">
+                </div>
+                <button class="carousel-button next" onclick="nextPhoto()">&#10095;</button>
+            </div>
+        </div>
+
+        <!-- Contador de momentos especiales -->
+        <div id="counter" class="hidden">
+            <h2>Días desde que te conocí: </h2>
+            <p id="daysCount"></p>
+            <h2>Nuestro tiempo juntos:</h2>
+            <p id="timeTogether"></p>
+        </div>
+
+        <!-- Reproductor de video -->
+        <div id="video" class="hidden">
+            <h2>La canción que me hizo automáticamente pensar en ti despues de meses de conocerte y mientras escribía la pequeña carta:</h2>
+            <div class="video-container">
+                <video controls>
+                    <source src="multimedia/video1.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+         <!-- Mensajes personalizados -->
+        <div id="letter" class="hidden">
+            <h2>Mi primer carta (De toda mi vida) para ti:</h2>
+            <div class="letter-content">
+                <img src="img/batcat.gif" alt="Gif batcat" class="gif">
+                <p>
+                    Mi Hermosa, Amada, Preciada y Querida esposa Constanza Elizabeth Sargado Carreño,<br><br>
+                    Desde el momento en que entraste en mi vida, todo cambió para bien empezando desde aquel día que yo aceleré tu laptop. Te convertiste en mi razón para ser más sentimental y humano con aquellos que lo merecen, mi inspiración para ser mejor y mi refugio en los momentos difíciles.<br><br>
+                    Quiero que sepas que te amo con todo mi corazón y que estoy agradecido por cada momento que compartimos. Eres lo más hermoso que me ha pasado, y no puedo esperar para seguir construyendo una vida llena de amor y felicidad a tu lado.<br><br>
+                    Aceptarías ser mi Valentín, mi Reina?. Eres mi todo.<br><br>
+                    Con todo mi amor.<br>
+                    Tu caballero de armadura oscura y Dios del inframundo: EL Blas
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</body>
+</html>
