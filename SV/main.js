@@ -14,29 +14,35 @@ function revealMessage() {
         origin: { y: 0.6 },
     });
 
-    // Mostrar la galería después de 2 segundos
+    // Mostrar la galería
     setTimeout(() => {
         
         const gallery = document.getElementById('gallery');
         gallery.classList.remove('hidden');
     }, 10000);
 
-    // Mostrar el contador después de 4 segundos
+    // Mostrar el contador
     setTimeout(() => {
         const counter = document.getElementById('counter');
         counter.classList.remove('hidden');
         calculateDaysSinceWeMet();
-    }, 10000);
+    }, 15000);
 
-     // Mostrar el video después de 6 segundos
+     // Mostrar el video
      setTimeout(() => {
         const video = document.getElementById('video');
         video.classList.remove('hidden');
-    }, 20000);
+    }, 50000);
+
+     // Mostrar la carta
+     setTimeout(() => {
+        const letter = document.getElementById('letter');
+        letter.classList.remove('hidden');
+    }, 70000);
 }
 
 function calculateDaysSinceWeMet() {
-    const dateWeMet = new Date('2021-10-13'); // Cambia esta fecha por la que desees
+    const dateWeMet = new Date('2021-10-13');
     const today = new Date();
     const timeDiff = today - dateWeMet;
     const daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
@@ -45,7 +51,7 @@ function calculateDaysSinceWeMet() {
 }
 
 function calculateTimeTogether() {
-    const dateWeMet = new Date('2022-08-12'); // Cambia esta fecha
+    const dateWeMet = new Date('2022-08-12');
     const today = new Date();
     const timeDiff = today - dateWeMet;
     const years = Math.floor(timeDiff / (1000 * 60 * 60 * 24 * 365));

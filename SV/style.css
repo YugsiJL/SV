@@ -164,4 +164,12 @@ video {
     #message, #gallery, #counter, #video {
         margin-top: 15px;
     }
+
+    .gif {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        margin-top: 20px;
+        border-radius: 10px;
+    }
 }
